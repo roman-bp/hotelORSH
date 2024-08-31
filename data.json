@@ -1,0 +1,29 @@
+{
+    "rooms": [
+      {
+        "room_id": 1,
+        "room_number": "101",
+        "room_type": "одномісна",
+        "price": 100,
+        "status": "доступна",
+        "maintenance": {
+          "last_checked": "2024-08-30",
+          "issues": []
+        }
+      },
+      {
+        "room_id": 2,
+        "room_number": "102",
+        "room_type": "двомісна",
+        "price": 150,
+        "status": "заброньована",
+        "maintenance": {
+          "last_checked": "2024-08-28",
+          "issues": ["Кондиціонер не працює"]
+        }
+      }
+    ],
+    "bookings": [],
+    "guests": []
+  }
+  

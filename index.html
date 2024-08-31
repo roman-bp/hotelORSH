@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система Управління Готелем</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Система Управління Готелем</h1>
+    </header>
+
+    <main>
+        <!-- Секция для работы с комнатами -->
+        <section id="rooms-section">
+            <h2>Кімнати</h2>
+            <div id="rooms"></div>
+            <button onclick="fetchRooms()">Оновити список кімнат</button>
+            
+            <!-- Форма для добавления новой комнаты -->
+            <h3>Додати нову кімнату</h3>
+            <form id="add-room-form" onsubmit="addRoom(event)">
+                <input type="text" id="room_number" placeholder="Номер кімнати" required>
+                <input type="text" id="room_type" placeholder="Тип кімнати" required>
+                <input type="number" id="price" placeholder="Ціна за ніч" required>
+                <input type="text" id="status" placeholder="Статус" required>
+                <input type="text" id="size" placeholder="Розмір кімнати">
+                <input type="number" id="beds" placeholder="Кількість ліжок">
+                <input type="text" id="amenities" placeholder="Зручності">
+                <input type="text" id="maintenance" placeholder="Технічне обслуговування">
+                <button type="submit">Додати кімнату</button>
+            </form>
+        </section>
+
+        <!-- Секция для работы с бронированиями -->
+        <section id="bookings-section">
+            <h2>Бронювання</h2>
+            <div id="bookings"></div>
+            <button onclick="fetchBookings()">Оновити список бронювань</button>
+            
+            <!-- Форма для добавления нового бронирования -->
+            <h3>Додати нове бронювання</h3>
+            <form id="add-booking-form" onsubmit="addBooking(event)">
+                <input type="number" id="room_id" placeholder="ID кімнати" required>
+                <input type="text" id="guest_name" placeholder="Ім'я гостя" required>
+                <input type="date" id="check_in_date" placeholder="Дата заїзду" required>
+                <input type="date" id="check_out_date" placeholder="Дата виїзду" required>
+                <input type="text" id="contact_info" placeholder="Контактна інформація" required>
+                <input type="number" id="total_price" placeholder="Загальна вартість" required>
+                <button type="submit">Додати бронювання</button>
+            </form>
+        </section>
+
+        <!-- Секция для работы с гостями -->
+        <section id="guests-section">
+            <h2>Гості</h2>
+            <div id="guests"></div>
+            <button onclick="fetchGuests()">Оновити список гостей</button>
+            
+            <!-- Форма для добавления нового гостя -->
+            <h3>Додати нового гостя</h3>
+            <form id="add-guest-form" onsubmit="addGuest(event)">
+                <input type="text" id="guest_name_form" placeholder="Ім'я" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="phone" placeholder="Телефон" required>
+                <input type="text" id="address" placeholder="Адреса" required>
+                <button type="submit">Додати гостя</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
